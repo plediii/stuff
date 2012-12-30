@@ -10,6 +10,10 @@ Foo.prototype.zoop = function () {
     console.log('Foo.zoop invoked: bar = ' + this.bar);
 };
 
+Foo.prototype.zap = function () {
+    console.log('Foo.zap invoked: bar = ' + this.bar);
+};
+
 var Quux = function (bar) {
     console.log('Creating a new Quux');
     Foo.apply(this, [bar]);
@@ -28,4 +32,5 @@ if (module.parent === null) {
 
     var quux = new Quux('quuxBaz');
     quux.zoop();
+    quux.zap();
 }

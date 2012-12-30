@@ -8,6 +8,10 @@ class Foo(object):
     def zoop(self):
         print 'Foo.zoop invoked: bar = ' + self.bar 
 
+    def zap(self):
+        print 'Foo.zap invoked: bar = ' + self.bar 
+
+
 class Quux(Foo):
 
     def __init__(self, bar):
@@ -22,7 +26,9 @@ if __name__ == '__main__':
     print 'Starting a python program.'
     foo = Foo('baz')
     foo.zoop()
+    foo.zap()
     quux = Quux('quuxBaz')
     quux.zoop()
+    quux.zap()
 
         
